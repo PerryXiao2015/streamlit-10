@@ -52,7 +52,8 @@ st.markdown(filedownload(df_selected_sector), unsafe_allow_html=True)
 
 data = yf.download(
         tickers = list(df_selected_sector[:10].Symbol),
-        period = "ytd",
+        #period = "ytd",
+        period = "5y",
         interval = "1d",
         group_by = 'ticker',
         auto_adjust = True,
