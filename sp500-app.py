@@ -49,12 +49,18 @@ def filedownload(df):
 st.markdown(filedownload(df_selected_sector), unsafe_allow_html=True)
 
 #Checkbox for Periods
-selectperiod = st.sidebar.selectbox("Select Period", ["1 Year","5 Years"])
+selectperiod = st.sidebar.selectbox("Select Period", ["3 Months", "6 Months", "1 Year","5 Years", "10 Years"])
 periods = "ytd"
 if selectperiod == "1 Year":
     periods = "ytd"
 elif selectperiod == "5 Years":
     periods = "5y"
+elif selectperiod == "10 Years":
+    periods = "10y"
+elif selectperiod == "3 Months":
+    periods = "2m"
+elif selectperiod == "6 Months":
+    periods = "6m"
     
 
 # https://pypi.org/project/yfinance/
